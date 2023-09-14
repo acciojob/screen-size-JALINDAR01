@@ -1,10 +1,14 @@
- function updateWindowSize() {
+function updateWindowSize() {
             const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
             // Update the text content of the elements
             document.getElementById("windowWidth").textContent = windowWidth + "px";
             document.getElementById("windowHeight").textContent = windowHeight + "px";
+
+            // Example: Update the sizeInfo element
+            const sizeInfoElement = document.getElementById("sizeInfo");
+            sizeInfoElement.textContent = "Window Size: " + windowWidth + "x" + windowHeight;
         }
 
         // Initial call to set the initial window size
